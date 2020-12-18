@@ -1,0 +1,58 @@
+{% extends 'base_new.html' %}
+{% block title %}buy{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style>
+    </style>
+{% endblock %}
+{% block body %}
+<table style="width:45%">
+    <tr>
+        <td>사과</td>
+        <td><form>
+            <output id="output" name=""><br>
+            </form></td>
+    </tr>
+    <tr>
+        <td>오렌지</td>
+        <td><form>
+            <output id="output2" name="orange"><br>
+            </form></td>
+    </tr>
+    <tr>
+        <td>바나나</td>
+        <td><form>
+            <output id="output" name="banana"><br>
+            </form></td>
+    </tr>
+    <tr>
+        <td>수박</td>
+        <td><form>
+            <output id="output" name="watermelon"><br>
+            </form></td>
+    </tr>
+</table>
+<form style="width:45%">
+  <input type="radio" id="card" name="method" value="카드결제">
+  <label for="card">카드결제</label><br>
+  <input type="radio" id="account" name="method" value="계좌이체">
+  <label for="account">계좌이체</label><br>
+  <input type="radio" id="phone" name="method" value="휴대폰결제">
+  <label for="phone">휴대폰결제</label><br>
+  <input type="radio" id="bankbook" name="method" value="무통장결제">
+  <label for="bankbook">무통장결제</label><br>
+</form>
+
+<form action="receipt.html" method="POST" onsubmit="nameNumberSubmit()">
+    <label for="name">이름</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="number">학번</label><br>
+    <input type="text" id="number" name="number"><br>
+    <input type="submit" value="이전"><br>
+    <input type="submit" value="결제"><br>
+</form>
+
+<script>
+    function
+</script>
+{% endblock %}
