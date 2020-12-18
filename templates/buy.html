@@ -7,7 +7,7 @@
 {% endblock %}
 {% block body %}
 <h1 class="title">Kelvin's Shop</h1>
-
+<label>구매 가격</label>
 <table style="width:45%">
     <tr>
         <td>사과</td>
@@ -34,6 +34,7 @@
             </form></td>
     </tr>
 </table>
+<label>구매 방법</label>
 <form style="width:45%">
   <input type="radio" id="card" name="method" value="카드결제">
   <label for="card">카드결제</label><br>
@@ -44,7 +45,7 @@
   <input type="radio" id="bankbook" name="method" value="무통장결제">
   <label for="bankbook">무통장결제</label><br>
 </form>
-
+<label>구매자 정보</label>
 <form action="receipt.html" method="POST" onsubmit="nameNumberSubmit()">
     <label for="name">이름</label><br>
     <div class="tooltip">
@@ -59,10 +60,8 @@
         학번을 입력해주세요.</span>
     </div><br>
 </form>
-<form>
     <button onclick="location.href='/main'">이전</button>
     <button onclick="location.href='/receipt'">결제</button>
-</form>
 
 <script>
     function toMain() {
