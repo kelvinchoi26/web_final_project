@@ -45,9 +45,17 @@
 
 <form action="receipt.html" method="POST" onsubmit="nameNumberSubmit()">
     <label for="name">이름</label><br>
-    <input type="text" id="name" name="name"><br>
+    <div class="tooltip">
+        <input type="text" id="name" name="name">
+        <span class="tooltiptext">
+        이름을 입력해주세요.</span>
+    </div><br>
     <label for="number">학번</label><br>
-    <input type="text" id="number" name="number"><br>
+    <div class="tooltip">
+        <input type="text" id="number" name="number">
+        <span class="tooltiptext">
+        학번을 입력해주세요.</span>
+    </div><br>
     <input type="submit" value="이전"><br>
     <input type="submit" value="결제"><br>
 </form>
