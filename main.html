@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
     <style>
 body {background-color: powderblue;}
 h1   {color: red;}
@@ -29,6 +30,39 @@ button {
     margin: 4px 2px;
     cursor: pointer;
 }
+.tooltip {
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    margin-left:9px;
+    width : 320px;
+    visibility: hidden;
+    background-color: #FFF;
+    border-radius:4px;
+    border: 1px solid #aeaeae;
+    position: absolute;
+    z-index: 1;
+    padding: 5px;
+    margin-top : -15px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 5%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #aeaeae transparent transparent;
+}
+
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
     </style>
 </head>
 <body>
@@ -37,7 +71,7 @@ button {
 
 <table style="width:100%">
     <tr>
-        <td>Product</td>
+        <td>상품</td>
         <td><img
             id="apple"
             class="fruit"
@@ -71,20 +105,20 @@ button {
     </tr>
     <tr>
         <td></td>
-        <td>Apple</td>
-        <td>Orange</td>
-        <td>Banana</td>
-        <td>Watermelon</td>
+        <td>사과</td>
+        <td>오렌지</td>
+        <td>바나나</td>
+        <td>수박</td>
     </tr>
     <tr>
-        <td>Price</td>
-        <td>1000won</td>
-        <td>1500won</td>
-        <td>3000won</td>
-        <td>3000won</td>
+        <td>가격</td>
+        <td>1000원</td>
+        <td>1500원</td>
+        <td>3000원</td>
+        <td>3000원</td>
     </tr>
     <tr>
-        <td>Quantity</td>
+        <td>수량</td>
         <td><form>
             <output id="output" name="apple"><br>
             </form></td>
@@ -92,10 +126,18 @@ button {
             <output id="output2" name="orange"><br>
             </form></td>
         <td><form>
-            <input type="text" id="banana" name="banana"><br>
+            <div class="tooltip">
+                <input type="text" id="banana">
+                <span class="tooltiptext">
+                수량을 입력해주세요.</span>
+            </div>
             </form></td>
         <td><form>
-            <input type="text" id="watermelon" name="watermelon"><br>
+            <div class="tooltip">
+                <input type="text" id="watermelon">
+                <span class="tooltiptext">
+                수량을 입력해주세요.</span>
+            </div>
             </form></td>
     </tr>
 </table>
