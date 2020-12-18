@@ -1,0 +1,46 @@
+{% extends 'base_new.html' %}
+{% block title %}receipt{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style>
+    </style>
+{% endblock %}
+{% block body %}
+<h1 class="title">Kelvin's Shop</h1>
+
+<table style="width:50%">
+    <tr>
+        <td style="width:50%">이름</td>
+        <td><form>
+            <output id="output2" name="name"><br>
+            </form></td>
+    </tr>
+    <tr>
+        <td style="width:50%">학번</td>
+        <td><form>
+            <output id="output2" name="number"><br>
+            </form></td>
+    </tr>
+    <tr>
+        <td style="width:50%"> Github 주소</td>
+        <td><form><a href="https://github.com/">https://github.com</a><br>
+            </form></td>
+    </tr>
+    <tr>
+        <td style="width:50%">총액</td>
+        <td><form>
+            <output id="output2" name="sum"><br>
+            </form></td>
+    </tr>
+    <tr>
+        <td style="width:50%">구매방법</td>
+        <td><form>
+            <output id="output2" name="method"><br>
+            </form></td>
+    </tr>
+</table>
+<form>
+    <button onclick="location.href='/buy'">이전</button>
+    <button onclick="location.href='/main'">확인</button>
+</form>
+{% endblock %}

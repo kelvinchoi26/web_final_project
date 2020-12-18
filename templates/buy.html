@@ -6,17 +6,19 @@
     </style>
 {% endblock %}
 {% block body %}
+<h1 class="title">Kelvin's Shop</h1>
+
 <table style="width:45%">
     <tr>
         <td>사과</td>
         <td><form>
-            <output id="output" name=""><br>
+            <output id="output" name="apple"><br>
             </form></td>
     </tr>
     <tr>
         <td>오렌지</td>
         <td><form>
-            <output id="output2" name="orange"><br>
+            <output id="output" name="orange"><br>
             </form></td>
     </tr>
     <tr>
@@ -56,11 +58,17 @@
         <span class="tooltiptext">
         학번을 입력해주세요.</span>
     </div><br>
-    <input type="submit" value="이전"><br>
-    <input type="submit" value="결제"><br>
+</form>
+<form>
+    <button onclick="location.href='/main'">이전</button>
+    <button onclick="location.href='/receipt'">결제</button>
 </form>
 
 <script>
-    function
+    function toMain() {
+
+    }
 </script>
+
+
 {% endblock %}
